@@ -1,0 +1,701 @@
+Script started on Mon Mar 13 20:21:25 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker ps -a[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                     PORTS     NAMES
+29df5993f4b5   ubuntu    "bash"    55 minutes ago   Exited (0) 8 minutes ago             amazing_engelbart
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker start -i [7mamazing_engelbart[27m[17D[27ma[27mm[27ma[27mz[27mi[27mn[27mg[27m_[27me[27mn[27mg[27me[27ml[27mb[27ma[27mr[27mt[?2004l
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K]0;root@29df5993f4b5: /root@29df5993f4b5:/# apt-get update
+[?2004l0% [Working]            Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]
+0% [Waiting for headers] [1 InRelease 14.2 kB/110 kB 13%]                                                         Get:2 http://archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+0% [2 InRelease 14.2 kB/270 kB 5%] [1 InRelease 63.4 kB/110 kB 57%]                                                                   0% [2 InRelease 14.2 kB/270 kB 5%]0% [2 InRelease 34.5 kB/270 kB 13%]                                   Get:3 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [823 kB]
+0% [2 InRelease 43.1 kB/270 kB 16%] [3 Packages 5583 B/823 kB 1%]                                                                 0% [2 InRelease 153 kB/270 kB 57%]0% [3 Packages store 0 B] [2 InRelease 153 kB/270 kB 57%] [Waiting for headers]                                                                               Get:4 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [865 kB]
+0% [3 Packages store 0 B] [2 InRelease 200 kB/270 kB 74%] [4 Packages 9927 B/865 kB 1%]                                                                                       0% [2 InRelease 204 kB/270 kB 75%] [4 Packages 108 kB/865 kB 13%]                                                                 0% [2 InRelease 270 kB/270 kB 100%] [Waiting for headers]                                                         Get:5 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [5557 B]
+                                                         Get:6 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [891 kB]
+                                                         0% [Waiting for headers] [6 Packages 84.8 kB/891 kB 10%]0% [4 Packages store 0 B] [Waiting for headers] [6 Packages 84.8 kB/891 kB 10%]                                                                               0% [4 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]0% [5 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]0% [6 Packages store 0 B] [Waiting for headers]                                               Get:7 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]
+0% [6 Packages store 0 B] [7 InRelease 2603 B/119 kB 2%]                                                        0% [7 InRelease 24.3 kB/119 kB 20%]0% [7 InRelease 85.1 kB/119 kB 72%]                                   0% [Working]0% [Waiting for headers]                        Get:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [107 kB]
+0% [8 InRelease 5499 B/107 kB 5%]                                 0% [Working]24% [Waiting for headers]                         Get:9 http://archive.ubuntu.com/ubuntu jammy/multiverse amd64 Packages [266 kB]
+24% [9 Packages 5583 B/266 kB 2%]                                 25% [Waiting for headers]                         Get:10 http://archive.ubuntu.com/ubuntu jammy/restricted amd64 Packages [164 kB]
+25% [10 Packages 6114 B/164 kB 4%]25% [9 Packages store 0 B] [10 Packages 6114 B/164 kB 4%]                                                         26% [10 Packages 46.7 kB/164 kB 28%]                                    26% [Waiting for headers]                         Get:11 http://archive.ubuntu.com/ubuntu jammy/universe amd64 Packages [17.5 MB]
+26% [11 Packages 12.5 kB/17.5 MB 0%]26% [10 Packages store 0 B] [11 Packages 12.5 kB/17.5 MB 0%]                                                            27% [11 Packages 45.8 kB/17.5 MB 0%]40% [11 Packages 4303 kB/17.5 MB 25%]52% [11 Packages 8333 kB/17.5 MB 48%]54% [11 Packages 8805 kB/17.5 MB 50%]54% [11 Packages 8805 kB/17.5 MB 50%]54% [11 Packages 8805 kB/17.5 MB 50%]54% [11 Packages 8806 kB/17.5 MB 50%]54% [11 Packages 8893 kB/17.5 MB 51%]58% [11 Packages 10.3 MB/17.5 MB 59%]60% [11 Packages 10.9 MB/17.5 MB 62%]                                                                                                                                                2276 kB/s 5s60% [11 Packages 10.9 MB/17.5 MB 62%]                                                                                                                                                2276 kB/s 5s62% [11 Packages 11.6 MB/17.5 MB 67%]                                                                                                                                                2276 kB/s 4s74% [11 Packages 15.4 MB/17.5 MB 88%]                                                                                                                                                2276 kB/s 3s80% [Working]                                                                                                                                                                        2276 kB/s 2s                                                                                                                                                                                                 Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 Packages [1792 kB]
+80% [11 Packages store 0 B] [12 Packages 16.9 kB/1792 kB 1%]                                                                                                                         2276 kB/s 2s86% [11 Packages store 0 B] [Waiting for headers]                                                                                                                                    2276 kB/s 1s                                                                                                                                                                                                 Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1193 kB]
+86% [11 Packages store 0 B] [13 Packages 59.5 kB/1193 kB 5%]                                                                                                                         2276 kB/s 1s89% [11 Packages store 0 B]                                                                                                                                                          2276 kB/s 0s                                                                                                                                                                                                 Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [880 kB]
+89% [11 Packages store 0 B] [14 Packages 0 B/880 kB 0%]                                                                                                                              2276 kB/s 0s92% [11 Packages store 0 B]                                                                                                                                                          2276 kB/s 0s                                                                                                                                                                                                 Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1129 kB]
+92% [11 Packages store 0 B] [15 Packages 0 B/1129 kB 0%]                                                                                                                             2276 kB/s 0s95% [11 Packages store 0 B] [Waiting for headers]                                                                                                                                    2276 kB/s 0s                                                                                                                                                                                                 Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [10.9 kB]
+95% [11 Packages store 0 B] [16 Packages 10.5 kB/10.9 kB 96%]                                                                                                                        2276 kB/s 0s95% [11 Packages store 0 B]                                                                                                                                                          2276 kB/s 0s95% [11 Packages store 0 B] [Connecting to archive.ubuntu.com (185.125.190.39)]                                                                                                      2276 kB/s 0s96% [Waiting for headers]                                                                                                                                                            2276 kB/s 0s96% [12 Packages store 0 B] [Waiting for headers]                                                                                                                                    2276 kB/s 0s                                                                                                                                                                                                 Get:17 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [49.0 kB]
+96% [12 Packages store 0 B] [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                        2276 kB/s 0s96% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s96% [13 Packages store 0 B] [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                        2276 kB/s 0s97% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s97% [14 Packages store 0 B] [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                        2276 kB/s 0s98% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s98% [15 Packages store 0 B] [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                        2276 kB/s 0s98% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s98% [16 Packages store 0 B] [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                        2276 kB/s 0s99% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s99% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s99% [17 Packages 14.3 kB/49.0 kB 29%]                                                                                                                                                2276 kB/s 0s99% [Waiting for headers]                                                                                                                                                            2276 kB/s 0s99% [17 Packages store 0 B] [Waiting for headers]                                                                                                                                    2276 kB/s 0s99% [Waiting for headers]                                                                                                                                                            2276 kB/s 0s                                                                                                                                                                                                 Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [22.4 kB]
+99% [18 Packages 5585 B/22.4 kB 25%]                                                                                                                                                 2276 kB/s 0s99% [Working]                                                                                                                                                                        2276 kB/s 0s99% [18 Packages store 0 B]                                                                                                                                                          2276 kB/s 0s100% [Working]                                                                                                                                                                       2276 kB/s 0s                                                                                                                                                                                                 Fetched 26.2 MB in 11s (2292 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 68%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 82%Reading package lists... 82%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [7mapt-get install curl[27mapt-get install curl
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 73%Reading package lists... 77%Reading package lists... 77%Reading package lists... 82%Reading package lists... 82%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  ca-certificates libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4 openssl publicsuffix
+Suggested packages:
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql
+The following NEW packages will be installed:
+  ca-certificates curl libbrotli1 libcurl4 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh-4 openssl publicsuffix
+0 upgraded, 15 newly installed, 0 to remove and 2 not upgraded.
+Need to get 2976 kB of archives.
+After this operation, 7096 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+0% [Working]0% [Waiting for headers]0% [Waiting for headers]                        Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 openssl amd64 3.0.2-0ubuntu1.8 [1184 kB]
+0% [1 openssl 15.6 kB/1184 kB 1%]0% [1 openssl 15.6 kB/1184 kB 1%]1% [1 openssl 51.8 kB/1184 kB 4%]4% [1 openssl 156 kB/1184 kB 13%]20% [1 openssl 735 kB/1184 kB 62%]                                  33% [Working]             Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 ca-certificates all 20211016ubuntu0.22.04.1 [144 kB]
+33% [2 ca-certificates 1165 B/144 kB 1%]                                        38% [Waiting for headers]                         Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnghttp2-14 amd64 1.43.0-1build3 [76.3 kB]
+39% [3 libnghttp2-14 24.6 kB/76.3 kB 32%]                                         42% [Waiting for headers]                         Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpsl5 amd64 0.21.0-1.2build2 [58.4 kB]
+43% [4 libpsl5 30.6 kB/58.4 kB 52%]                                   45% [Waiting for headers]                         Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 publicsuffix all 20211207.1025-1 [129 kB]
+45% [5 publicsuffix 15.3 kB/129 kB 12%]                                       49% [Waiting for headers]                         Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbrotli1 amd64 1.0.9-2build6 [315 kB]
+50% [6 libbrotli1 13.0 kB/315 kB 4%]                                    59% [Waiting for headers]                         Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules-db amd64 2.1.27+dfsg2-3ubuntu1.2 [20.5 kB]
+60% [7 libsasl2-modules-db 19.0 kB/20.5 kB 93%]                                               61% [Waiting for headers]                         Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-2 amd64 2.1.27+dfsg2-3ubuntu1.2 [53.8 kB]
+61% [8 libsasl2-2 4040 B/53.8 kB 8%]                                    64% [Waiting for headers]                         Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-0ubuntu0.22.04.1 [183 kB]
+64% [9 libldap-2.5-0 16.5 kB/183 kB 9%]                                       70% [Waiting for headers]                         Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build4 [58.2 kB]
+70% [10 librtmp1 8408 B/58.2 kB 14%]                                    73% [Waiting for headers]                         Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 libssh-4 amd64 0.9.6-2build1 [184 kB]
+74% [11 libssh-4 20.4 kB/184 kB 11%]                                    79% [Working]             Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcurl4 amd64 7.81.0-1ubuntu1.8 [290 kB]
+79% [12 libcurl4 1165 B/290 kB 0%]84% [12 libcurl4 173 kB/290 kB 60%]                                   89% [Working]             Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 curl amd64 7.81.0-1ubuntu1.8 [194 kB]
+89% [13 curl 6957 B/194 kB 4%]                              95% [Waiting for headers]                         Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libldap-common all 2.5.13+dfsg-0ubuntu0.22.04.1 [15.9 kB]
+95% [14 libldap-common 15.3 kB/15.9 kB 96%]                                           97% [Waiting for headers]                         Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libsasl2-modules amd64 2.1.27+dfsg2-3ubuntu1.2 [68.8 kB]
+97% [15 libsasl2-modules 4938 B/68.8 kB 7%]                                           100% [Working]              Fetched 2976 kB in 5s (596 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package openssl.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4395 files and directories currently installed.)
+Preparing to unpack .../00-openssl_3.0.2-0ubuntu1.8_amd64.deb ...
+Unpacking openssl (3.0.2-0ubuntu1.8) ...
+Selecting previously unselected package ca-certificates.
+Preparing to unpack .../01-ca-certificates_20211016ubuntu0.22.04.1_all.deb ...
+Unpacking ca-certificates (20211016ubuntu0.22.04.1) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../02-libnghttp2-14_1.43.0-1build3_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.43.0-1build3) ...
+Selecting previously unselected package libpsl5:amd64.
+Preparing to unpack .../03-libpsl5_0.21.0-1.2build2_amd64.deb ...
+Unpacking libpsl5:amd64 (0.21.0-1.2build2) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../04-publicsuffix_20211207.1025-1_all.deb ...
+Unpacking publicsuffix (20211207.1025-1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../05-libbrotli1_1.0.9-2build6_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.0.9-2build6) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../06-libsasl2-modules-db_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../07-libsasl2-2_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Selecting previously unselected package libldap-2.5-0:amd64.
+Preparing to unpack .../08-libldap-2.5-0_2.5.13+dfsg-0ubuntu0.22.04.1_amd64.deb ...
+Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../09-librtmp1_2.4+20151223.gitfa8646d.1-2build4_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../10-libssh-4_0.9.6-2build1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.9.6-2build1) ...
+Selecting previously unselected package libcurl4:amd64.
+Preparing to unpack .../11-libcurl4_7.81.0-1ubuntu1.8_amd64.deb ...
+Unpacking libcurl4:amd64 (7.81.0-1ubuntu1.8) ...
+Selecting previously unselected package curl.
+Preparing to unpack .../12-curl_7.81.0-1ubuntu1.8_amd64.deb ...
+Unpacking curl (7.81.0-1ubuntu1.8) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../13-libldap-common_2.5.13+dfsg-0ubuntu0.22.04.1_all.deb ...
+Unpacking libldap-common (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../14-libsasl2-modules_2.1.27+dfsg2-3ubuntu1.2_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libpsl5:amd64 (0.21.0-1.2build2) ...
+Setting up libbrotli1:amd64 (1.0.9-2build6) ...
+Setting up libsasl2-modules:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libnghttp2-14:amd64 (1.43.0-1build3) ...
+Setting up libldap-common (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Setting up libsasl2-modules-db:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build4) ...
+Setting up libsasl2-2:amd64 (2.1.27+dfsg2-3ubuntu1.2) ...
+Setting up libssh-4:amd64 (0.9.6-2build1) ...
+Setting up openssl (3.0.2-0ubuntu1.8) ...
+Setting up publicsuffix (20211207.1025-1) ...
+Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-0ubuntu0.22.04.1) ...
+Setting up ca-certificates (20211016ubuntu0.22.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Updating certificates in /etc/ssl/certs...
+124 added, 0 removed; done.
+Setting up libcurl4:amd64 (7.81.0-1ubuntu1.8) ...
+Setting up curl (7.81.0-1ubuntu1.8) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for ca-certificates (20211016ubuntu0.22.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+done.
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# apt-get install curl    nano
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 73%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 6%Reading state information... Done
+Suggested packages:
+  hunspell
+The following NEW packages will be installed:
+  nano
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 280 kB of archives.
+After this operation, 881 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 nano amd64 6.2-1 [280 kB]
+4% [1 nano 14.2 kB/280 kB 5%]55% [1 nano 194 kB/280 kB 69%]                              100% [Working]              Fetched 280 kB in 1s (316 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package nano.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4968 files and directories currently installed.)
+Preparing to unpack .../archives/nano_6.2-1_amd64.deb ...
+Unpacking nano (6.2-1) ...
+Setting up nano (6.2-1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [7mcurl -sL https://deb.nodesource.com/setup_16.x | bash[27m]0;root@29df5993f4b5: /root@29df5993f4b5:/# curl -sL https://deb.nodesource.com/setup_16.x | bash
+[?2004l
+## Installing the NodeSource Node.js 16.x repo...
+
+
+## Populating apt-get cache...
+
++ apt-get update
+0% [Working]            Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]0% [Connecting to archive.ubuntu.com]                                     0% [Waiting for headers]                        Hit:2 http://archive.ubuntu.com/ubuntu jammy InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+0% [Waiting for headers]0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+                        0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 69%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+
+## Installing packages required for setup: lsb-release gnupg...
+
++ apt-get install -y lsb-release gnupg > /dev/null 2>&1
+
+## Confirming "jammy" is supported...
+
++ curl -sLf -o /dev/null 'https://deb.nodesource.com/node_16.x/dists/jammy/Release'
+
+## Adding the NodeSource signing key to your keyring...
+
++ curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | tee /usr/share/keyrings/nodesource.gpg >/dev/null
+
+## Creating apt sources list file for the NodeSource Node.js 16.x repo...
+
++ echo 'deb [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' > /etc/apt/sources.list.d/nodesource.list
++ echo 'deb-src [signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_16.x jammy main' >> /etc/apt/sources.list.d/nodesource.list
+
+## Running `apt-get update` for you...
+
++ apt-get update
+0% [Working]            Get:1 https://deb.nodesource.com/node_16.x jammy InRelease [4583 B]
+0% [Connecting to archive.ubuntu.com (91.189.91.38)] [Waiting for headers] [1 InRelease 0 B/4583 B 0%]                                                                                                      0% [Connecting to archive.ubuntu.com (91.189.91.38)] [Waiting for headers]                                                                          Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+                                                                          0% [Connecting to archive.ubuntu.com (185.125.190.39)]0% [Connecting to archive.ubuntu.com (185.125.190.39)]                                                      Get:3 https://deb.nodesource.com/node_16.x jammy/main amd64 Packages [777 B]
+0% [Waiting for headers] [3 Packages 777 B/777 B 100%]                                                      0% [Waiting for headers]0% [3 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu jammy InRelease
+                        0% [Working]0% [Waiting for headers]                        Hit:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                        0% [Working]            Hit:6 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+0% [Working]0% [Working]0% [Working]100% [Working]              Fetched 5360 B in 1s (6201 B/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 69%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+
+## Run `[1msudo apt-get install -y nodejs(B[m` to install Node.js 16.x and npm
+## You may also need development tools to build native addons:
+     sudo apt-get install gcc g++ make
+## To install the Yarn package manager, run:
+     curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/yarnkey.gpg >/dev/null
+     echo "deb [signed-by=/usr/share/keyrings/yarnkey.gpg] https://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+     sudo apt-get update && sudo apt-get install yarn
+
+
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K[7mapt-get install -y nodejs[27mapt-get install -y nodejs
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 2%Reading state information... Done
+The following NEW packages will be installed:
+  nodejs
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 27.2 MB of archives.
+After this operation, 128 MB of additional disk space will be used.
+0% [Working]            Get:1 https://deb.nodesource.com/node_16.x jammy/main amd64 nodejs amd64 16.19.1-deb-1nodesource1 [27.2 MB]
+0% [1 nodejs 32.8 kB/27.2 MB 0%]15% [1 nodejs 4996 kB/27.2 MB 18%]32% [1 nodejs 10.9 MB/27.2 MB 40%]41% [1 nodejs 13.9 MB/27.2 MB 51%]41% [1 nodejs 13.9 MB/27.2 MB 51%]45% [1 nodejs 15.2 MB/27.2 MB 56%]47% [1 nodejs 16.1 MB/27.2 MB 59%]47% [1 nodejs 16.1 MB/27.2 MB 59%]47% [1 nodejs 16.1 MB/27.2 MB 59%]54% [1 nodejs 18.4 MB/27.2 MB 68%]57% [1 nodejs 19.3 MB/27.2 MB 71%]57% [1 nodejs 19.3 MB/27.2 MB 71%]57% [1 nodejs 19.3 MB/27.2 MB 71%]                                                                                                                                                   2997 kB/s 2s61% [1 nodejs 20.8 MB/27.2 MB 76%]                                                                                                                                                   2997 kB/s 2s61% [1 nodejs 20.8 MB/27.2 MB 76%]                                                                                                                                                   2997 kB/s 2s61% [1 nodejs 20.8 MB/27.2 MB 76%]                                                                                                                                                   2997 kB/s 2s72% [1 nodejs 24.5 MB/27.2 MB 90%]                                                                                                                                                   2997 kB/s 0s100% [Working]                                                                                                                                                                       2997 kB/s 0s                                                                                                                                                                                                 Fetched 27.2 MB in 9s (3094 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package nodejs.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6025 files and directories currently installed.)
+Preparing to unpack .../nodejs_16.19.1-deb-1nodesource1_amd64.deb ...
+Unpacking nodejs (16.19.1-deb-1nodesource1) ...
+Setting up nodejs (16.19.1-deb-1nodesource1) ...
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [7mapt-get install gcc g++ make[27mapt-get install gcc g++ make
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 2%Reading state information... Done
+The following additional packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-11 fontconfig-config fonts-dejavu-core g++-11 gcc-11 gcc-11-base libasan6 libatomic1 libbinutils libbsd0 libc-dev-bin libc-devtools
+  libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8 liblsan0 libmd0
+  libmpc3 libmpfr6 libnsl-dev libpng16-16 libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4 linux-libc-dev
+  manpages manpages-dev rpcsvc-proto ucf
+Suggested packages:
+  binutils-doc cpp-doc gcc-11-locales g++-multilib g++-11-multilib gcc-11-doc gcc-multilib autoconf automake libtool flex bison gdb gcc-doc gcc-11-multilib glibc-doc libgd-tools
+  libstdc++-11-doc make-doc man-browser
+The following NEW packages will be installed:
+  binutils binutils-common binutils-x86-64-linux-gnu cpp cpp-11 fontconfig-config fonts-dejavu-core g++ g++-11 gcc gcc-11 gcc-11-base libasan6 libatomic1 libbinutils libbsd0 libc-dev-bin
+  libc-devtools libc6-dev libcc1-0 libcrypt-dev libctf-nobfd0 libctf0 libdeflate0 libfontconfig1 libfreetype6 libgcc-11-dev libgd3 libgomp1 libisl23 libitm1 libjbig0 libjpeg-turbo8 libjpeg8
+  liblsan0 libmd0 libmpc3 libmpfr6 libnsl-dev libpng16-16 libquadmath0 libstdc++-11-dev libtiff5 libtirpc-dev libtsan0 libubsan1 libwebp7 libx11-6 libx11-data libxau6 libxcb1 libxdmcp6 libxpm4
+  linux-libc-dev make manpages manpages-dev rpcsvc-proto ucf
+0 upgraded, 59 newly installed, 0 to remove and 2 not upgraded.
+Need to get 70.0 MB of archives.
+After this operation, 226 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmd0 amd64 1.0.4-1build1 [23.0 kB]
+0% [1 libmd0 14.2 kB/23.0 kB 62%]                                 0% [Working]            Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 libbsd0 amd64 0.11.5-1 [44.8 kB]
+0% [2 libbsd0 2615 B/44.8 kB 6%]                                1% [Waiting for headers]                        Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 ucf all 3.0043 [56.1 kB]
+1% [3 ucf 1014 B/56.1 kB 2%]                            1% [Waiting for headers]                        Get:4 http://archive.ubuntu.com/ubuntu jammy/main amd64 libpng16-16 amd64 1.6.37-3build5 [191 kB]
+1% [4 libpng16-16 2571 B/191 kB 1%]                                   2% [Waiting for headers]                        Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxau6 amd64 1:1.0.9-1build5 [7634 B]
+2% [5 libxau6 7634 B/7634 B 100%]                                 2% [Working]            Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxdmcp6 amd64 1:1.1.3-0ubuntu5 [10.9 kB]
+2% [6 libxdmcp6 3429 B/10.9 kB 31%]                                   2% [Waiting for headers]                        Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 libxcb1 amd64 1.14-3ubuntu3 [49.0 kB]
+2% [7 libxcb1 3473 B/49.0 kB 7%]                                3% [Waiting for headers]                        Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 libx11-data all 2:1.7.5-1 [119 kB]
+3% [8 libx11-data 1944 B/119 kB 2%]                                   3% [Waiting for headers]                        Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 libx11-6 amd64 2:1.7.5-1 [666 kB]
+3% [9 libx11-6 6833 B/666 kB 1%]                                4% [Waiting for headers]                        Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 manpages all 5.10-1ubuntu1 [1375 kB]
+4% [10 manpages 7488 B/1375 kB 1%]                                  6% [Waiting for headers]                        Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-common amd64 2.38-4ubuntu2.1 [221 kB]
+6% [11 binutils-common 21.7 kB/221 kB 10%]                                          7% [Working]            Get:12 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libbinutils amd64 2.38-4ubuntu2.1 [661 kB]
+7% [12 libbinutils 14.2 kB/661 kB 2%]7% [12 libbinutils 191 kB/661 kB 29%]                                     8% [Working]            Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf-nobfd0 amd64 2.38-4ubuntu2.1 [107 kB]
+8% [13 libctf-nobfd0 1165 B/107 kB 1%]                                      8% [Waiting for headers]                        Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libctf0 amd64 2.38-4ubuntu2.1 [103 kB]
+8% [14 libctf0 3900 B/103 kB 4%]                                9% [Waiting for headers]                        Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.38-4ubuntu2.1 [2328 kB]
+9% [15 binutils-x86-64-linux-gnu 7797 B/2328 kB 0%]                                                   12% [Waiting for headers]                         Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils amd64 2.38-4ubuntu2.1 [3198 B]
+12% [16 binutils 3198 B/3198 B 100%]                                    12% [Waiting for headers]                         Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-base amd64 11.3.0-1ubuntu1~22.04 [20.8 kB]
+12% [17 gcc-11-base 20.8 kB/20.8 kB 100%]                                         13% [Waiting for headers]                         Get:18 http://archive.ubuntu.com/ubuntu jammy/main amd64 libisl23 amd64 0.24-2build1 [727 kB]
+13% [18 libisl23 38.8 kB/727 kB 5%]                                   14% [Waiting for headers]                         Get:19 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpfr6 amd64 4.1.0-3build3 [1425 kB]
+14% [19 libmpfr6 18.3 kB/1425 kB 1%]                                    16% [Waiting for headers]                         Get:20 http://archive.ubuntu.com/ubuntu jammy/main amd64 libmpc3 amd64 1.2.1-2build1 [46.9 kB]
+16% [20 libmpc3 46.9 kB/46.9 kB 100%]                                     16% [Working]             Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 cpp-11 amd64 11.3.0-1ubuntu1~22.04 [9967 kB]
+16% [21 cpp-11 73.8 kB/9967 kB 1%]22% [21 cpp-11 5330 kB/9967 kB 53%]25% [21 cpp-11 7460 kB/9967 kB 75%]                                   28% [Waiting for headers]                         Get:22 http://archive.ubuntu.com/ubuntu jammy/main amd64 cpp amd64 4:11.2.0-1ubuntu1 [27.7 kB]
+28% [22 cpp 19.1 kB/27.7 kB 69%]                                28% [Working]             Get:23 http://archive.ubuntu.com/ubuntu jammy/main amd64 fonts-dejavu-core all 2.37-2build1 [1041 kB]
+28% [23 fonts-dejavu-core 14.2 kB/1041 kB 1%]28% [23 fonts-dejavu-core 185 kB/1041 kB 18%]                                             30% [Working]             Get:24 http://archive.ubuntu.com/ubuntu jammy/main amd64 fontconfig-config all 2.13.1-4.2ubuntu5 [29.1 kB]
+30% [24 fontconfig-config 0 B/29.1 kB 0%]                                         30% [Working]             Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libcc1-0 amd64 12.1.0-2ubuntu1~22.04 [47.4 kB]
+30% [25 libcc1-0 0 B/47.4 kB 0%]                                31% [Waiting for headers]                         Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1 amd64 12.1.0-2ubuntu1~22.04 [126 kB]
+31% [26 libgomp1 23.0 kB/126 kB 18%]                                    31% [Waiting for headers]                         Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1 amd64 12.1.0-2ubuntu1~22.04 [30.2 kB]
+31% [27 libitm1 24.6 kB/30.2 kB 81%]                                    31% [Working]             Get:28 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1 amd64 12.1.0-2ubuntu1~22.04 [10.4 kB]
+31% [28 libatomic1 10.4 kB/10.4 kB 100%]                                        32% [Working]             Get:29 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6 amd64 11.3.0-1ubuntu1~22.04 [2284 kB]
+32% [29 libasan6 24.0 kB/2284 kB 1%]35% [Waiting for headers]                                                                                                                                                           3596 kB/s 13s                                                                                                                                                                                                 Get:30 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0 amd64 12.1.0-2ubuntu1~22.04 [1069 kB]
+35% [30 liblsan0 10.6 kB/1069 kB 1%]                                                                                                                                                3596 kB/s 13s36% [Working]                                                                                                                                                                       3596 kB/s 13s                                                                                                                                                                                                 Get:31 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0 amd64 11.3.0-1ubuntu1~22.04 [2262 kB]
+36% [31 libtsan0 12.5 kB/2262 kB 1%]                                                                                                                                                3596 kB/s 13s39% [Waiting for headers]                                                                                                                                                           3596 kB/s 12s                                                                                                                                                                                                 Get:32 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1 amd64 12.1.0-2ubuntu1~22.04 [976 kB]
+39% [32 libubsan1 1165 B/976 kB 0%]                                                                                                                                                 3596 kB/s 12s41% [Waiting for headers]                                                                                                                                                           3596 kB/s 12s                                                                                                                                                                                                 Get:33 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libquadmath0 amd64 12.1.0-2ubuntu1~22.04 [154 kB]
+41% [33 libquadmath0 16.4 kB/154 kB 11%]                                                                                                                                            3596 kB/s 12s41% [Working]                                                                                                                                                                       3596 kB/s 12s41% [Waiting for headers]                                                                                                                                                           3596 kB/s 12s                                                                                                                                                                                                 Get:34 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-11-dev amd64 11.3.0-1ubuntu1~22.04 [2517 kB]
+41% [34 libgcc-11-dev 0 B/2517 kB 0%]                                                                                                                                               3596 kB/s 12s41% [34 libgcc-11-dev 99.6 kB/2517 kB 4%]                                                                                                                                           3596 kB/s 12s42% [34 libgcc-11-dev 1171 kB/2517 kB 47%]                                                                                                                                          3596 kB/s 11s44% [Working]                                                                                                                                                                       3596 kB/s 11s                                                                                                                                                                                                 Get:35 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11 amd64 11.3.0-1ubuntu1~22.04 [20.1 MB]
+44% [35 gcc-11 16.6 kB/20.1 MB 0%]                                                                                                                                                  3596 kB/s 11s45% [35 gcc-11 366 kB/20.1 MB 2%]                                                                                                                                                   3596 kB/s 11s48% [35 gcc-11 2875 kB/20.1 MB 14%]                                                                                                                                                 3596 kB/s 10s56% [35 gcc-11 9949 kB/20.1 MB 50%]                                                                                                                                                  3596 kB/s 8s63% [35 gcc-11 16.0 MB/20.1 MB 80%]                                                                                                                                                  3596 kB/s 7s68% [Waiting for headers]                                                                                                                                                            3596 kB/s 5s                                                                                                                                                                                                 Get:36 http://archive.ubuntu.com/ubuntu jammy/main amd64 gcc amd64 4:11.2.0-1ubuntu1 [5112 B]
+68% [Waiting for headers]                                                                                                                                                            3596 kB/s 5s                                                                                                                                                                                                 Get:37 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-dev-bin amd64 2.35-0ubuntu3.1 [20.4 kB]
+68% [37 libc-dev-bin 17.4 kB/20.4 kB 85%]                                                                                                                                            3596 kB/s 5s68% [Working]                                                                                                                                                                        3596 kB/s 5s                                                                                                                                                                                                 Get:38 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 linux-libc-dev amd64 5.15.0-67.74 [1329 kB]
+68% [38 linux-libc-dev 5397 B/1329 kB 0%]                                                                                                                                            3596 kB/s 5s70% [Waiting for headers]                                                                                                                                                            3596 kB/s 5s                                                                                                                                                                                                 Get:39 http://archive.ubuntu.com/ubuntu jammy/main amd64 libcrypt-dev amd64 1:4.4.27-1 [112 kB]
+70% [39 libcrypt-dev 27.0 kB/112 kB 24%]                                                                                                                                             3596 kB/s 5s71% [Waiting for headers]                                                                                                                                                            3596 kB/s 5s                                                                                                                                                                                                 Get:40 http://archive.ubuntu.com/ubuntu jammy/main amd64 rpcsvc-proto amd64 1.4.2-0ubuntu6 [68.5 kB]
+71% [40 rpcsvc-proto 26.5 kB/68.5 kB 39%]                                                                                                                                            3596 kB/s 5s71% [Working]                                                                                                                                                                        3596 kB/s 5s                                                                                                                                                                                                 Get:41 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtirpc-dev amd64 1.3.2-2ubuntu0.1 [192 kB]
+71% [41 libtirpc-dev 22.9 kB/192 kB 12%]                                                                                                                                             3596 kB/s 5s72% [Waiting for headers]                                                                                                                                                            3596 kB/s 5s                                                                                                                                                                                                 Get:42 http://archive.ubuntu.com/ubuntu jammy/main amd64 libnsl-dev amd64 1.3.0-2build2 [71.3 kB]
+72% [42 libnsl-dev 4191 B/71.3 kB 6%]                                                                                                                                                3596 kB/s 5s72% [Working]                                                                                                                                                                        3596 kB/s 5s                                                                                                                                                                                                 Get:43 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc6-dev amd64 2.35-0ubuntu3.1 [2099 kB]
+72% [43 libc6-dev 13.7 kB/2099 kB 1%]                                                                                                                                                3596 kB/s 5s75% [Waiting for headers]                                                                                                                                                            3596 kB/s 4s                                                                                                                                                                                                 Get:44 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++-11-dev amd64 11.3.0-1ubuntu1~22.04 [2087 kB]
+75% [44 libstdc++-11-dev 16.5 kB/2087 kB 1%]                                                                                                                                         3596 kB/s 4s78% [Working]                                                                                                                                                                        3596 kB/s 4s                                                                                                                                                                                                 Get:45 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 g++-11 amd64 11.3.0-1ubuntu1~22.04 [11.4 MB]
+78% [45 g++-11 5506 B/11.4 MB 0%]                                                                                                                                                    3596 kB/s 4s78% [45 g++-11 178 kB/11.4 MB 2%]                                                                                                                                                    5320 kB/s 2s80% [45 g++-11 2573 kB/11.4 MB 23%]                                                                                                                                                  5320 kB/s 2s87% [45 g++-11 8617 kB/11.4 MB 76%]                                                                                                                                                  5320 kB/s 1s91% [Working]                                                                                                                                                                        5320 kB/s 0s                                                                                                                                                                                                 Get:46 http://archive.ubuntu.com/ubuntu jammy/main amd64 g++ amd64 4:11.2.0-1ubuntu1 [1412 B]
+91% [46 g++ 1412 B/1412 B 100%]                                                                                                                                                      5320 kB/s 0s91% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:47 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libfreetype6 amd64 2.11.1+dfsg-1ubuntu0.1 [389 kB]
+91% [47 libfreetype6 11.3 kB/389 kB 3%]                                                                                                                                              5320 kB/s 0s92% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:48 http://archive.ubuntu.com/ubuntu jammy/main amd64 libfontconfig1 amd64 2.13.1-4.2ubuntu5 [131 kB]
+92% [48 libfontconfig1 10.2 kB/131 kB 8%]                                                                                                                                            5320 kB/s 0s92% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:49 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg-turbo8 amd64 2.1.2-0ubuntu1 [134 kB]
+93% [49 libjpeg-turbo8 11.7 kB/134 kB 9%]                                                                                                                                            5320 kB/s 0s93% [Working]                                                                                                                                                                        5320 kB/s 0s                                                                                                                                                                                                 Get:50 http://archive.ubuntu.com/ubuntu jammy/main amd64 libjpeg8 amd64 8c-2ubuntu10 [2264 B]
+93% [50 libjpeg8 2264 B/2264 B 100%]                                                                                                                                                 5320 kB/s 0s93% [Working]                                                                                                                                                                        5320 kB/s 0s                                                                                                                                                                                                 Get:51 http://archive.ubuntu.com/ubuntu jammy/main amd64 libdeflate0 amd64 1.10-2 [70.9 kB]
+93% [51 libdeflate0 0 B/70.9 kB 0%]                                                                                                                                                  5320 kB/s 0s94% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:52 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.22.04.1 [29.2 kB]
+94% [52 libjbig0 29.2 kB/29.2 kB 100%]                                                                                                                                               5320 kB/s 0s94% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:53 http://archive.ubuntu.com/ubuntu jammy/main amd64 libwebp7 amd64 1.2.2-2 [206 kB]
+94% [53 libwebp7 2570 B/206 kB 1%]                                                                                                                                                   5320 kB/s 0s95% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:54 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtiff5 amd64 4.3.0-6ubuntu0.4 [183 kB]
+95% [54 libtiff5 10.7 kB/183 kB 6%]                                                                                                                                                  5320 kB/s 0s95% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:55 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.22.04.1 [36.4 kB]
+95% [55 libxpm4 18.8 kB/36.4 kB 52%]                                                                                                                                                 5320 kB/s 0s96% [Working]                                                                                                                                                                        5320 kB/s 0s                                                                                                                                                                                                 Get:56 http://archive.ubuntu.com/ubuntu jammy/main amd64 libgd3 amd64 2.3.0-2ubuntu2 [129 kB]
+96% [56 libgd3 6957 B/129 kB 5%]                                                                                                                                                     5320 kB/s 0s96% [Working]                                                                                                                                                                        5320 kB/s 0s                                                                                                                                                                                                 Get:57 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libc-devtools amd64 2.35-0ubuntu3.1 [28.9 kB]
+96% [57 libc-devtools 2615 B/28.9 kB 9%]                                                                                                                                             5320 kB/s 0s96% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:58 http://archive.ubuntu.com/ubuntu jammy/main amd64 make amd64 4.3-4.1build1 [180 kB]
+96% [58 make 2342 B/180 kB 1%]                                                                                                                                                       5320 kB/s 0s97% [Waiting for headers]                                                                                                                                                            5320 kB/s 0s                                                                                                                                                                                                 Get:59 http://archive.ubuntu.com/ubuntu jammy/main amd64 manpages-dev all 5.10-1ubuntu1 [2309 kB]
+97% [59 manpages-dev 6211 B/2309 kB 0%]                                                                                                                                              5320 kB/s 0s100% [Working]                                                                                                                                                                       5320 kB/s 0s                                                                                                                                                                                                 Fetched 70.0 MB in 15s (4569 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libmd0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9230 files and directories currently installed.)
+Preparing to unpack .../00-libmd0_1.0.4-1build1_amd64.deb ...
+Unpacking libmd0:amd64 (1.0.4-1build1) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../01-libbsd0_0.11.5-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.11.5-1) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../02-ucf_3.0043_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0043) ...
+Selecting previously unselected package libpng16-16:amd64.
+Preparing to unpack .../03-libpng16-16_1.6.37-3build5_amd64.deb ...
+Unpacking libpng16-16:amd64 (1.6.37-3build5) ...
+Selecting previously unselected package libxau6:amd64.
+Preparing to unpack .../04-libxau6_1%3a1.0.9-1build5_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.9-1build5) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../05-libxdmcp6_1%3a1.1.3-0ubuntu5_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../06-libxcb1_1.14-3ubuntu3_amd64.deb ...
+Unpacking libxcb1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../07-libx11-data_2%3a1.7.5-1_all.deb ...
+Unpacking libx11-data (2:1.7.5-1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../08-libx11-6_2%3a1.7.5-1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.7.5-1) ...
+Selecting previously unselected package manpages.
+Preparing to unpack .../09-manpages_5.10-1ubuntu1_all.deb ...
+Unpacking manpages (5.10-1ubuntu1) ...
+Selecting previously unselected package binutils-common:amd64.
+Preparing to unpack .../10-binutils-common_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking binutils-common:amd64 (2.38-4ubuntu2.1) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../11-libbinutils_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking libbinutils:amd64 (2.38-4ubuntu2.1) ...
+Selecting previously unselected package libctf-nobfd0:amd64.
+Preparing to unpack .../12-libctf-nobfd0_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking libctf-nobfd0:amd64 (2.38-4ubuntu2.1) ...
+Selecting previously unselected package libctf0:amd64.
+Preparing to unpack .../13-libctf0_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking libctf0:amd64 (2.38-4ubuntu2.1) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../14-binutils-x86-64-linux-gnu_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.38-4ubuntu2.1) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../15-binutils_2.38-4ubuntu2.1_amd64.deb ...
+Unpacking binutils (2.38-4ubuntu2.1) ...
+Selecting previously unselected package gcc-11-base:amd64.
+Preparing to unpack .../16-gcc-11-base_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11-base:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libisl23:amd64.
+Preparing to unpack .../17-libisl23_0.24-2build1_amd64.deb ...
+Unpacking libisl23:amd64 (0.24-2build1) ...
+Selecting previously unselected package libmpfr6:amd64.
+Preparing to unpack .../18-libmpfr6_4.1.0-3build3_amd64.deb ...
+Unpacking libmpfr6:amd64 (4.1.0-3build3) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../19-libmpc3_1.2.1-2build1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.2.1-2build1) ...
+Selecting previously unselected package cpp-11.
+Preparing to unpack .../20-cpp-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking cpp-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../21-cpp_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking cpp (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../22-fonts-dejavu-core_2.37-2build1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../23-fontconfig-config_2.13.1-4.2ubuntu5_all.deb ...
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../24-libcc1-0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../25-libgomp1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libgomp1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../26-libitm1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libitm1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../27-libatomic1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libatomic1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libasan6:amd64.
+Preparing to unpack .../28-libasan6_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libasan6:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../29-liblsan0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking liblsan0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../30-libtsan0_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libtsan0:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../31-libubsan1_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libubsan1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../32-libquadmath0_12.1.0-2ubuntu1~22.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Selecting previously unselected package libgcc-11-dev:amd64.
+Preparing to unpack .../33-libgcc-11-dev_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libgcc-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc-11.
+Preparing to unpack .../34-gcc-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking gcc-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../35-gcc_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking gcc (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../36-libc-dev-bin_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-dev-bin (2.35-0ubuntu3.1) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../37-linux-libc-dev_5.15.0-67.74_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.15.0-67.74) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../38-libcrypt-dev_1%3a4.4.27-1_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.27-1) ...
+Selecting previously unselected package rpcsvc-proto.
+Preparing to unpack .../39-rpcsvc-proto_1.4.2-0ubuntu6_amd64.deb ...
+Unpacking rpcsvc-proto (1.4.2-0ubuntu6) ...
+Selecting previously unselected package libtirpc-dev:amd64.
+Preparing to unpack .../40-libtirpc-dev_1.3.2-2ubuntu0.1_amd64.deb ...
+Unpacking libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Selecting previously unselected package libnsl-dev:amd64.
+Preparing to unpack .../41-libnsl-dev_1.3.0-2build2_amd64.deb ...
+Unpacking libnsl-dev:amd64 (1.3.0-2build2) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../42-libc6-dev_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.35-0ubuntu3.1) ...
+Selecting previously unselected package libstdc++-11-dev:amd64.
+Preparing to unpack .../43-libstdc++-11-dev_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking libstdc++-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++-11.
+Preparing to unpack .../44-g++-11_11.3.0-1ubuntu1~22.04_amd64.deb ...
+Unpacking g++-11 (11.3.0-1ubuntu1~22.04) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../45-g++_4%3a11.2.0-1ubuntu1_amd64.deb ...
+Unpacking g++ (4:11.2.0-1ubuntu1) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../46-libfreetype6_2.11.1+dfsg-1ubuntu0.1_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.1) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../47-libfontconfig1_2.13.1-4.2ubuntu5_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../48-libjpeg-turbo8_2.1.2-0ubuntu1_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../49-libjpeg8_8c-2ubuntu10_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package libdeflate0:amd64.
+Preparing to unpack .../50-libdeflate0_1.10-2_amd64.deb ...
+Unpacking libdeflate0:amd64 (1.10-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../51-libjbig0_2.1-3.1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Selecting previously unselected package libwebp7:amd64.
+Preparing to unpack .../52-libwebp7_1.2.2-2_amd64.deb ...
+Unpacking libwebp7:amd64 (1.2.2-2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../53-libtiff5_4.3.0-6ubuntu0.4_amd64.deb ...
+Unpacking libtiff5:amd64 (4.3.0-6ubuntu0.4) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../54-libxpm4_1%3a3.5.12-1ubuntu0.22.04.1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../55-libgd3_2.3.0-2ubuntu2_amd64.deb ...
+Unpacking libgd3:amd64 (2.3.0-2ubuntu2) ...
+Selecting previously unselected package libc-devtools.
+Preparing to unpack .../56-libc-devtools_2.35-0ubuntu3.1_amd64.deb ...
+Unpacking libc-devtools (2.35-0ubuntu3.1) ...
+Selecting previously unselected package make.
+Preparing to unpack .../57-make_4.3-4.1build1_amd64.deb ...
+Unpacking make (4.3-4.1build1) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../58-manpages-dev_5.10-1ubuntu1_all.deb ...
+Unpacking manpages-dev (5.10-1ubuntu1) ...
+Setting up gcc-11-base:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up libxau6:amd64 (1:1.0.9-1build5) ...
+Setting up manpages (5.10-1ubuntu1) ...
+Setting up binutils-common:amd64 (2.38-4ubuntu2.1) ...
+Setting up libdeflate0:amd64 (1.10-2) ...
+Setting up linux-libc-dev:amd64 (5.15.0-67.74) ...
+Setting up libctf-nobfd0:amd64 (2.38-4ubuntu2.1) ...
+Setting up libgomp1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.22.04.1) ...
+Setting up libasan6:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up libtirpc-dev:amd64 (1.3.2-2ubuntu0.1) ...
+Setting up rpcsvc-proto (1.4.2-0ubuntu6) ...
+Setting up libx11-data (2:1.7.5-1) ...
+Setting up make (4.3-4.1build1) ...
+Setting up libmpfr6:amd64 (4.1.0-3build3) ...
+Setting up libquadmath0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libpng16-16:amd64 (1.6.37-3build5) ...
+Setting up libmpc3:amd64 (1.2.1-2build1) ...
+Setting up libatomic1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up ucf (3.0043) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 78.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.34.0 /usr/local/share/perl/5.34.0 /usr/lib/x86_64-linux-gnu/perl5/5.34 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.34 /usr/share/perl/5.34 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libwebp7:amd64 (1.2.2-2) ...
+Setting up libubsan1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libmd0:amd64 (1.0.4-1build1) ...
+Setting up libnsl-dev:amd64 (1.3.0-2build2) ...
+Setting up libcrypt-dev:amd64 (1:4.4.27-1) ...
+Setting up libbinutils:amd64 (2.38-4ubuntu2.1) ...
+Setting up libisl23:amd64 (0.24-2build1) ...
+Setting up libc-dev-bin (2.35-0ubuntu3.1) ...
+Setting up libbsd0:amd64 (0.11.5-1) ...
+Setting up libcc1-0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up liblsan0:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libitm1:amd64 (12.1.0-2ubuntu1~22.04) ...
+Setting up libtsan0:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up libctf0:amd64 (2.38-4ubuntu2.1) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up cpp-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up manpages-dev (5.10-1ubuntu1) ...
+Setting up libxdmcp6:amd64 (1:1.1.3-0ubuntu5) ...
+Setting up libxcb1:amd64 (1.14-3ubuntu3) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up libfreetype6:amd64 (2.11.1+dfsg-1ubuntu0.1) ...
+Setting up libgcc-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up cpp (4:11.2.0-1ubuntu1) ...
+Setting up libc6-dev:amd64 (2.35-0ubuntu3.1) ...
+Setting up libx11-6:amd64 (2:1.7.5-1) ...
+Setting up libtiff5:amd64 (4.3.0-6ubuntu0.4) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Setting up binutils-x86-64-linux-gnu (2.38-4ubuntu2.1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.1) ...
+Setting up binutils (2.38-4ubuntu2.1) ...
+Setting up libgd3:amd64 (2.3.0-2ubuntu2) ...
+Setting up libstdc++-11-dev:amd64 (11.3.0-1ubuntu1~22.04) ...
+Setting up gcc-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up libc-devtools (2.35-0ubuntu3.1) ...
+Setting up g++-11 (11.3.0-1ubuntu1~22.04) ...
+Setting up gcc (4:11.2.0-1ubuntu1) ...
+Setting up g++ (4:11.2.0-1ubuntu1) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/c++.1.gz because associated file /usr/share/man/man1/g++.1.gz (of link group c++) doesn't exist
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K[7mapt-get update && sudo apt-get install yarn[27mapt-get update && sudo apt-get install yarn
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+0% [Waiting for headers] [Connected to deb.nodesource.com (62.165.159.42)]                                                                          Hit:2 http://security.ubuntu.com/ubuntu jammy-security InRelease
+                                                                          0% [Waiting for headers] [Waiting for headers]                                              Hit:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                                              0% [Waiting for headers]                        Hit:4 https://deb.nodesource.com/node_16.x jammy InRelease
+0% [Waiting for headers]                        Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+                        0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 73%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+bash: sudo: command not found
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [Kapt-get update && sudo apt-get install yarn[1P[1P[1P[1P[1P
+[?2004l0% [Working]            Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+0% [Waiting for headers] [Waiting for headers]                                              Hit:2 https://deb.nodesource.com/node_16.x jammy InRelease
+0% [Waiting for headers] [Waiting for headers]                                              Hit:3 http://security.ubuntu.com/ubuntu jammy-security InRelease
+                                              0% [Waiting for headers]                        Hit:4 http://archive.ubuntu.com/ubuntu jammy-updates InRelease
+                        0% [Working]            Hit:5 http://archive.ubuntu.com/ubuntu jammy-backports InRelease
+0% [Working]0% [Working]0% [Working]0% [Working]0% [Working]20% [Working]             Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 70%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 6%Reading package lists... 6%Reading package lists... 7%Reading package lists... 7%Reading package lists... 71%Reading package lists... 71%Reading package lists... 72%Reading package lists... 72%Reading package lists... 72%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 87%Reading package lists... 91%Reading package lists... 91%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+Note, selecting 'cmdtest' instead of 'yarn'
+The following additional packages will be installed:
+  libyaml-0-2 python3-cliapp python3-importlib-metadata python3-markdown python3-more-itertools python3-pkg-resources python3-pygments python3-ttystatus python3-yaml python3-zipp
+Suggested packages:
+  python3-xdg python-markdown-doc python3-setuptools python-pygments-doc ttf-bitstream-vera
+The following NEW packages will be installed:
+  cmdtest libyaml-0-2 python3-cliapp python3-importlib-metadata python3-markdown python3-more-itertools python3-pkg-resources python3-pygments python3-ttystatus python3-yaml python3-zipp
+0 upgraded, 11 newly installed, 0 to remove and 2 not upgraded.
+Need to get 1282 kB of archives.
+After this operation, 6484 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 libyaml-0-2 amd64 0.2.2-1build2 [51.6 kB]
+1% [1 libyaml-0-2 14.2 kB/51.6 kB 28%]                                      5% [Working]            Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 python3-pkg-resources all 59.6.0-1.2ubuntu0.22.04.1 [132 kB]
+6% [2 python3-pkg-resources 8405 B/132 kB 6%]                                             Get:3 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-yaml amd64 5.4.1-1ubuntu1 [129 kB]
+                                             16% [3 python3-yaml 11.7 kB/129 kB 9%]                                      25% [Waiting for headers]                         Get:4 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-cliapp all 1.20180812.1-4 [44.5 kB]
+25% [4 python3-cliapp 901 B/44.5 kB 2%]                                       30% [Waiting for headers]                         Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-more-itertools all 8.10.0-2 [47.9 kB]
+30% [5 python3-more-itertools 2484 B/47.9 kB 5%]                                                34% [Working]             Get:6 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-zipp all 1.0.0-3 [5440 B]
+35% [6 python3-zipp 2080 B/5440 B 38%]                                      37% [Working]             Get:7 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-importlib-metadata all 4.6.4-1 [16.2 kB]
+37% [7 python3-importlib-metadata 5047 B/16.2 kB 31%]                                                     39% [Waiting for headers]                         Get:8 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-markdown all 3.3.6-1 [68.5 kB]
+39% [8 python3-markdown 119 B/68.5 kB 0%]                                         45% [Working]             Get:9 http://archive.ubuntu.com/ubuntu jammy/universe amd64 python3-ttystatus all 0.38-4 [14.7 kB]
+46% [9 python3-ttystatus 12.5 kB/14.7 kB 85%]                                             48% [Working]             Get:10 http://archive.ubuntu.com/ubuntu jammy/universe amd64 cmdtest all 0.32.14.gcdfe14e-2 [21.9 kB]
+49% [10 cmdtest 4753 B/21.9 kB 22%]                                   51% [Waiting for headers]                         Get:11 http://archive.ubuntu.com/ubuntu jammy/main amd64 python3-pygments all 2.11.2+dfsg-2 [750 kB]
+52% [11 python3-pygments 5739 B/750 kB 1%]                                          100% [Working]              Fetched 1282 kB in 1s (1154 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libyaml-0-2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 15384 files and directories currently installed.)
+Preparing to unpack .../00-libyaml-0-2_0.2.2-1build2_amd64.deb ...
+Unpacking libyaml-0-2:amd64 (0.2.2-1build2) ...
+Selecting previously unselected package python3-pkg-resources.
+Preparing to unpack .../01-python3-pkg-resources_59.6.0-1.2ubuntu0.22.04.1_all.deb ...
+Unpacking python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.1) ...
+Selecting previously unselected package python3-yaml.
+Preparing to unpack .../02-python3-yaml_5.4.1-1ubuntu1_amd64.deb ...
+Unpacking python3-yaml (5.4.1-1ubuntu1) ...
+Selecting previously unselected package python3-cliapp.
+Preparing to unpack .../03-python3-cliapp_1.20180812.1-4_all.deb ...
+Unpacking python3-cliapp (1.20180812.1-4) ...
+Selecting previously unselected package python3-more-itertools.
+Preparing to unpack .../04-python3-more-itertools_8.10.0-2_all.deb ...
+Unpacking python3-more-itertools (8.10.0-2) ...
+Selecting previously unselected package python3-zipp.
+Preparing to unpack .../05-python3-zipp_1.0.0-3_all.deb ...
+Unpacking python3-zipp (1.0.0-3) ...
+Selecting previously unselected package python3-importlib-metadata.
+Preparing to unpack .../06-python3-importlib-metadata_4.6.4-1_all.deb ...
+Unpacking python3-importlib-metadata (4.6.4-1) ...
+Selecting previously unselected package python3-markdown.
+Preparing to unpack .../07-python3-markdown_3.3.6-1_all.deb ...
+Unpacking python3-markdown (3.3.6-1) ...
+Selecting previously unselected package python3-ttystatus.
+Preparing to unpack .../08-python3-ttystatus_0.38-4_all.deb ...
+Unpacking python3-ttystatus (0.38-4) ...
+Selecting previously unselected package cmdtest.
+Preparing to unpack .../09-cmdtest_0.32.14.gcdfe14e-2_all.deb ...
+Unpacking cmdtest (0.32.14.gcdfe14e-2) ...
+Selecting previously unselected package python3-pygments.
+Preparing to unpack .../10-python3-pygments_2.11.2+dfsg-2_all.deb ...
+Unpacking python3-pygments (2.11.2+dfsg-2) ...
+Setting up python3-pkg-resources (59.6.0-1.2ubuntu0.22.04.1) ...
+Setting up python3-ttystatus (0.38-4) ...
+Setting up python3-more-itertools (8.10.0-2) ...
+Setting up libyaml-0-2:amd64 (0.2.2-1build2) ...
+Setting up python3-yaml (5.4.1-1ubuntu1) ...
+Setting up python3-zipp (1.0.0-3) ...
+Setting up python3-cliapp (1.20180812.1-4) ...
+Setting up python3-pygments (2.11.2+dfsg-2) ...
+Setting up python3-importlib-metadata (4.6.4-1) ...
+Setting up python3-markdown (3.3.6-1) ...
+Setting up cmdtest (0.32.14.gcdfe14e-2) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K[7mdpkg -s[27mdpkg -s nano
+[?2004lPackage: nano
+Status: install ok installed
+Priority: important
+Section: editors
+Installed-Size: 860
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 6.2-1
+Replaces: nano-tiny (<< 2.8.6-2), pico
+Depends: libc6 (>= 2.34), libncursesw6 (>= 6), libtinfo6 (>= 6)
+Suggests: hunspell
+Breaks: nano-tiny (<< 2.8.6-2)
+Conflicts: pico
+Conffiles:
+ /etc/nanorc b2c34817282284614d58163ef56df0d9
+Description: small, friendly text editor inspired by Pico
+ GNU nano is an easy-to-use text editor originally designed as a replacement
+ for Pico, the ncurses-based editor from the non-free mailer package Pine
+ (itself now available under the Apache License as Alpine).
+ .
+ However, GNU nano also implements many features missing in Pico, including:
+  - undo/redo
+  - line numbering
+  - syntax coloring
+  - soft-wrapping of overlong lines
+  - selecting text by holding Shift
+  - interactive search and replace (with regular expression support)
+  - a go-to line (and column) command
+  - support for multiple file buffers
+  - auto-indentation
+  - tab completion of filenames and search terms
+  - toggling features while running
+  - and full internationalization support
+Original-Maintainer: Jordi Mallach <jordi@debian.org>
+Homepage: https://www.nano-editor.org/
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# node -v
+[?2004lv16.19.1
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# yarn -v
+[?2004lERROR: There are no scenarios; must have at least one.
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# yarn --version
+[?2004l0.32+git
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# cd /usr/src/app
+[?2004l[?2004h]0;root@29df5993f4b5: /usr/src/approot@29df5993f4b5:/usr/src/app# ls
+[?2004lindex.js
+[?2004h]0;root@29df5993f4b5: /usr/src/approot@29df5993f4b5:/usr/src/app# nano index.js 
+[?2004l[?2004h[?1049h[22;0;0t[1;22r(B[m[4l[?7h[39;49m[?1h=[?1h=[?25l[39;49m(B[m[H[2J[20;91H(B[0;7m[ Reading... ](B[m[20;90H(B[0;7m[ Read 0 lines ](B[m[H(B[0;7m  GNU nano 6.2 [80bindex.js [89b [1;193H(B[m[21d(B[0;7m^G(B[m Help[21;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is[52G(B[0;7m^K(B[m Cut[21;69H(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location[103G(B[0;7mM-U(B[m Undo[21;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[22d(B[0;7m^X(B[m Exit[22;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace[52G(B[0;7m^U(B[m Paste[22;69H(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[22;120H(B[0;7mM-6(B[m Copy[22;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[22;171H(B[0;7m^F(B[m Forward[2d[?12l[?25h[?25l[?12l[?25h[?25l[1;105H(B[0;7m*[193G(B[m[?12l[?25h[2dc[?25l[?12l[?25ho[?25l[?12l[?25hn[?25l[?12l[?25hs[?25l[?12l[?25ho[?25l[?12l[?25hl[?25l[?12l[?25he[?25l[?12l[?25h.[?25l[?12l[?25hl[?25l[?12l[?25ho[?25l[?12l[?25hg[?25l[?12l[?25h([?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[20d[K[?12l[?25h[2;6H [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h [?25l[?12l[?25h[K[?25lconsole.log((B[0;1m[35m'Hello World'[39m(B[m)[?12l[?25h[?25l[21;18H[31X[21;49H(B[0;7mM-D(B[m DOS Format[69G [9b[86G [10b(B[0;7mM-A(B[m Append    [21;120H[25X[21;145H(B[0;7mM-B(B[m Backup File[K[22;2H(B[0;7mC(B[m Cancel[22;18H[31X[22;49H(B[0;7mM-M(B[m Mac Format[69G [9b[86G [10b(B[0;7mM-P(B[m Prepend   [22;120H [7b[22;137H [7b(B[0;7m^T(B[m Browse[K[20d(B[0;7mFile Name to Write: index.js [164b [20;29H(B[m[?12l[?25h[?25l[20;90H[1K (B[0;7m[ Writing... ](B[m[K[1;105H(B[0;7m [193G(B[m[20;90H(B[0;7m[ Wrote 1 line ](B[m[21;18H(B[0;7m^O(B[m Write Out     (B[0;7m^W(B[m Where Is      (B[0;7m^K(B[m Cut     [69G(B[0;7m^T(B[m Execute[86G(B[0;7m^C(B[m Location      (B[0;7mM-U(B[m Undo[21;120H(B[0;7mM-A(B[m Set Mark     (B[0;7mM-](B[m To Bracket   (B[0;7mM-Q(B[m Previous     (B[0;7m^B(B[m Back[22;2H(B[0;7mX(B[m Exit  [22;18H(B[0;7m^R(B[m Read File     (B[0;7m^\(B[m Replace [6b(B[0;7m^U(B[m Paste   [69G(B[0;7m^J(B[m Justify[86G(B[0;7m^/(B[m Go To Line    (B[0;7mM-E(B[m Redo[22;120H(B[0;7mM-6(B[m Copy[22;137H(B[0;7m^Q(B[m Where Was     (B[0;7mM-W(B[m Next[22;171H(B[0;7m^F(B[m Forward[?12l[?25h[2;27H[?25l[20d[J[22d[?12l[?25h[22;1H[?1049l[23;0;0t[?1l>[?2004l[?2004h]0;root@29df5993f4b5: /usr/src/approot@29df5993f4b5:/usr/src/app# cd ../..//  /
+[?2004l[?2004h]0;root@29df5993f4b5: /usrroot@29df5993f4b5:/usr# cd ..
+[?2004l[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [?2004l
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker ps -a[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                     PORTS     NAMES
+29df5993f4b5   ubuntu    "bash"    About an hour ago   Exited (0) 9 seconds ago             amazing_engelbart
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hf ddocker kill [7mamazing_engelbart[27m[17D[27ma[27mm[27ma[27mz[27mi[27mn[27mg[27m_[27me[27mn[27mg[27me[27ml[27mb[27ma[27mr[27mt[?2004l
+Error response from daemon: Cannot kill container: amazing_engelbart: Container 29df5993f4b55fe41f80962d8a8910412ef8c4a458943114ee294c9511e32f37 is not running
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker stop [7m29df5993f4b5[27m[12D[27m2[27m9[27md[27mf[27m5[27m9[27m9[27m3[27mf[27m4[27mb[27m5[?2004l
+29df5993f4b5
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004heexit[?2004l
+
+Script done on Mon Mar 13 20:36:25 2023
