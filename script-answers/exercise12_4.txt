@@ -1,0 +1,17 @@
+Script started on Mon Mar 13 20:42:14 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker ps -a[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                     PORTS     NAMES
+29df5993f4b5   ubuntu    "bash"    About an hour ago   Exited (0) 7 minutes ago             amazing_engelbart
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker start -i [7m29df5993f4b5[27m[12D[27m2[27m9[27md[27mf[27m5[27m9[27m9[27m3[27mf[27m4[27mb[27m5[?2004l
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K]0;root@29df5993f4b5: /root@29df5993f4b5:/# [7mnode /usr/src/app/index.js[27mnode /usr/src/app/index.js
+[?2004lHello World
+[?2004h]0;root@29df5993f4b5: /root@29df5993f4b5:/# [K[?2004l
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker ps -a[?2004l
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                      PORTS     NAMES
+29df5993f4b5   ubuntu    "bash"    About an hour ago   Exited (0) 10 seconds ago             amazing_engelbart
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hddocker stop [7m29df5993f4b5[27m[12D[27m2[27m9[27md[27mf[27m5[27m9[27m9[27m3[27mf[27m4[27mb[27m5[?2004l
+29df5993f4b5
+[1m[7m%[27m[1m[0m                                                                                                                                                                                                  [0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004heexit[?2004l
+
+Script done on Mon Mar 13 20:44:36 2023
