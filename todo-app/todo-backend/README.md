@@ -1,14 +1,14 @@
 # Express application
 
-Install dependencies with `npm install`
+Install dependencies with `yarn`
 
-Run with `npm start`
+Run with `yarn start`
 
-Or in development mode with `npm run dev`
+Or in development mode with `yarn run dev`
 
 # Visit counter
 
-When running the server, visit http://localhost:3000 to see visit counter, or give environment variable `PORT` to change the port.
+When running the server, visit http://localhost:8080 to see visit counter, or give environment variable `PORT` to change the port.
 
 # MongoDB
 
@@ -16,4 +16,4 @@ The application has /todos crud which requires a MongoDB. Pass connection url wi
 
 # Redis
 
-Pass connection url with env `REDIS_URL`
+Create a Redis Cloud instance and pass connection with env's `REDIS_HOST`, `REDIS_PASSWORD` & `REDIS_PORT`
