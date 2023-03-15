@@ -1,24 +1,22 @@
 const redis = require("redis");
 const { promisify } = require("util");
-const { REDIS_HOST, REDIS_PASSWORD, REDIS_PORT } = require("../util/config");
+const { REDIS_URL } = require("../util/config");
 
 let getAsync;
 let setAsync;
 
-if (!REDIS_HOST && !REDIS_PASSWORD && !REDIS_PORT) {
+if (!REDIS_URL) {
   const redisIsDisabled = () => {
-    console.log("No Redis credentials set, Redis is disabled");
+    console.log("No Redis URL set, Redis is disabled");
     return null;
   };
   getAsync = redisIsDisabled;
   setAsync = redisIsDisabled;
 } else {
   const client = redis.createClient({
-    host: REDIS_HOST,
-    port: parseInt(REDIS_PORT),
-    password: REDIS_PASSWORD,
+    url: REDIS_URL,
   });
-
+  
   getAsync = promisify(client.get).bind(client);
   setAsync = promisify(client.set).bind(client);
 }

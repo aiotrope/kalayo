@@ -1,12 +1,41 @@
 version: "3.9"
 
 services:
-  kalayo:
-    container_name: kalayo
-    image: kalayo
-    restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
+  # mongo service
+  mongo_db:
+    container_name: mongo_container
+    image: mongo:6
+    restart: unless-stopped
+    # volumes:
+      # - mongo_db:/data/db # convention
+  
+  redis_db:
+    container_name: redis_container
+    image: redis:7
+    restart: unless-stopped
+
+
+  # backend service
+  kalayo_backend:
+    container_name: kalayo_backend
+    image: kalayo_backend
+    restart: unless-stopped
+    build: .
     ports:
-      - "${PORT}:${PORT}"
+      - 8080:8080
+
+    environment:
+      PORT: ${PORT}
+      MONGO_URL: ${MONGO_URL}
+      REDIS_URL: ${REDIS_URL}
+      
+    links:
+      - mongo_db
+      - redis_db
+    depends_on:
+      - mongo_db
+      - redis_db
+    
+# volumes:
+  # mongo_db: {}
+
