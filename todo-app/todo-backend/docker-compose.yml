@@ -11,10 +11,13 @@ services:
     # volumes:
       # - mongo_db:/data/db # convention
   
-  redis_db:
+  cache:
     container_name: redis_container
     image: redis:7
+    command: ['redis-server', '--appendonly', 'yes']
     restart: unless-stopped
+    volumes:
+      - cache:/data
 
 
   # backend service
@@ -36,7 +39,7 @@ services:
       - redis_db
     depends_on:
       - mongo_db
-      - redis_db
+      - cache
     
 # volumes:
   # mongo_db: {}

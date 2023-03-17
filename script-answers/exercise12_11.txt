@@ -1,0 +1,54 @@
+Script started on Sat Mar 18 00:04:55 2023
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo[0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hccd toso  do-app[1m/[0m[0m/todo-backend[1m/[0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004hcclear[?2004l
+[H[2J[1m[7m%[27m[1m[0m                                                                                ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004hddocker ps[?2004l
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS          PORTS                    NAMES
+8c0a90d6d497   todo-backend-todo_backend   "docker-entrypoint.s…"   24 minutes ago   Up 13 minutes   0.0.0.0:8080->8080/tcp   todo-backend-todo_backend-1
+9884705851eb   redis:latest                "docker-entrypoint.s…"   24 minutes ago   Up 13 minutes   0.0.0.0:6379->6379/tcp   todo-backend-cache-1
+6462883fb34a   mongo:latest                "docker-entrypoint.s…"   24 minutes ago   Up 13 minutes   27017/tcp                todo-backend-mongo_db-1
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004hddocker exec -it [7m9884705851eb[27m[12D[27m9[27m8[27m8[27m4[27m7[27m0[27m5[27m8[27m5[27m1[27me[27mb /bin/sh[?2004l
+# redis-cli
+127.0.0.1:6379> [0K127.0.0.1:6379> k[17C[0K127.0.0.1:6379> ke[18C[0K127.0.0.1:6379> key[19C[0K127.0.0.1:6379> keys[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> keys [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+(empty array)
+127.0.0.1:6379> [0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+1) "todos"
+127.0.0.1:6379> [0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+(empty array)
+127.0.0.1:6379> [0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+1) "add"
+127.0.0.1:6379> [0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+1) "add"
+2) "todos"
+127.0.0.1:6379> [0K127.0.0.1:6379> g[17C[0K127.0.0.1:6379> ge[18C[0K127.0.0.1:6379> get[0;90;49m key[0m[19C[0K127.0.0.1:6379> get [0;90;49mkey[0m[20C[0K127.0.0.1:6379> get a[0;90;49m [0m[21C[0K127.0.0.1:6379> get ad[0;90;49m [0m[22C[0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> get add[23C
+"3"
+127.0.0.1:6379> [0K127.0.0.1:6379> g[17C[0K127.0.0.1:6379> ge[18C[0K127.0.0.1:6379> get[0;90;49m key[0m[19C[0K127.0.0.1:6379> get [0;90;49mkey[0m[20C[0K127.0.0.1:6379> get t[0;90;49m [0m[21C[0K127.0.0.1:6379> get to[0;90;49m [0m[22C[0K127.0.0.1:6379> get tod[0;90;49m [0m[23C[0K127.0.0.1:6379> get todo[0;90;49m [0m[24C[0K127.0.0.1:6379> get todos[0;90;49m [0m[25C[0K127.0.0.1:6379> get todos[25C
+(nil)
+127.0.0.1:6379> [0K127.0.0.1:6379> s[17C[0K127.0.0.1:6379> se[18C[0K127.0.0.1:6379> set[0;90;49m key value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT uni[0m[19C[0K127.0.0.1:6379> set [0;90;49mkey value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT uni[0m[20C[0K127.0.0.1:6379> set a[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-[0m[21C[0K127.0.0.1:6379> set ad[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix[0m[22C[0K127.0.0.1:6379> set add[0;90;49m value [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT uni[0m[23C[0K127.0.0.1:6379> set add [0;90;49mvalue [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT uni[0m[24C[0K127.0.0.1:6379> set add 9[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-ti[0m[25C[0K127.0.0.1:6379> set add 90[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-t[0m[26C[0K127.0.0.1:6379> set add 900[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix-[0m[27C[0K127.0.0.1:6379> set add 9001[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix[0m[28C[0K127.0.0.1:6379> set add 9001[28C
+OK
+127.0.0.1:6379> [0K127.0.0.1:6379> g[17C[0K127.0.0.1:6379> ge[18C[0K127.0.0.1:6379> get[0;90;49m key[0m[19C[0K127.0.0.1:6379> get [0;90;49mkey[0m[20C[0K127.0.0.1:6379> get a[0;90;49m [0m[21C[0K127.0.0.1:6379> get ad[0;90;49m [0m[22C[0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> get add [0;90;49m[0m[24C[0K127.0.0.1:6379> get add [24C
+"9001"
+127.0.0.1:6379> [0K127.0.0.1:6379> d[17C[0K127.0.0.1:6379> de[18C[0K127.0.0.1:6379> del[0;90;49m key [key ...][0m[19C[0K127.0.0.1:6379> del [0;90;49mkey [key ...][0m[20C[0K127.0.0.1:6379> del a[0;90;49m [key ...][0m[21C[0K127.0.0.1:6379> del ad[0;90;49m [key ...][0m[22C[0K127.0.0.1:6379> del add[0;90;49m [key ...][0m[23C[0K127.0.0.1:6379> del add[23C
+(integer) 1
+127.0.0.1:6379> [0K127.0.0.1:6379> g[17C[0K127.0.0.1:6379> ge[18C[0K127.0.0.1:6379> get[0;90;49m key[0m[19C[0K127.0.0.1:6379> get [0;90;49mkey[0m[20C[0K127.0.0.1:6379> get a[0;90;49m [0m[21C[0K127.0.0.1:6379> get ad[0;90;49m [0m[22C[0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> get add[23C
+(nil)
+127.0.0.1:6379> [0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> del add[0;90;49m [key ...][0m[23C[0K127.0.0.1:6379> get add [0;90;49m[0m[24C[0K127.0.0.1:6379> set add 9001[0;90;49m [NX|XX] [GET] [EX seconds|PX milliseconds|EXAT unix[0m[28C[0K127.0.0.1:6379> get todos[0;90;49m [0m[25C[0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+1) "add"
+127.0.0.1:6379> [0K127.0.0.1:6379> g[17C[0K127.0.0.1:6379> ge[18C[0K127.0.0.1:6379> get[0;90;49m key[0m[19C[0K127.0.0.1:6379> get [0;90;49mkey[0m[20C[0K127.0.0.1:6379> get a[0;90;49m [0m[21C[0K127.0.0.1:6379> get ad[0;90;49m [0m[22C[0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> get add[23C
+"4"
+127.0.0.1:6379> [0K127.0.0.1:6379> get add[0;90;49m [0m[23C[0K127.0.0.1:6379> get add[23C
+"5"
+127.0.0.1:6379> [0K127.0.0.1:6379> k[17C[0K127.0.0.1:6379> ke[18C[0K127.0.0.1:6379> key[19C[0K127.0.0.1:6379> keys[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> keys[20C
+(error) ERR wrong number of arguments for 'keys' command
+127.0.0.1:6379> [0K127.0.0.1:6379> keys[0;90;49m pattern[0m[20C[0K127.0.0.1:6379> keys [0;90;49mpattern[0m[21C[0K127.0.0.1:6379> keys *[0;90;49m [0m[22C[0K127.0.0.1:6379> keys *[22C
+1) "add"
+127.0.0.1:6379> [0K127.0.0.1:6379> e[17C[0K127.0.0.1:6379> ex[18C[0K127.0.0.1:6379> exi[19C[0K127.0.0.1:6379> exit[20C[0K127.0.0.1:6379> exit[20C
+# exit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004heexit[?2004l
+
+Saving session...
+...copying shared history...
+...saving history...truncating history files...
+...completed.
+Deleting expired sessions...       4 completed.
+
+Script done on Sat Mar 18 00:19:57 2023
