@@ -1,15 +1,19 @@
-FROM node:alpine
+FROM node:16.19
 
 WORKDIR /usr/src/app
 
-COPY package.json yarn.lock ./
+COPY package*.json .
 
-RUN rm -rf node_modules && yarn install --frozen-lockfile && yarn cache clean
+RUN npm ci 
 
-COPY . .
+COPY --chown=node:node . .
 
 ENV PORT=8080
 
+ENV DEBUG=todo-express-backend:*
+
 EXPOSE 8080
 
-CMD ["yarn", "start"]
+USER node
+
+CMD ["npm", "start"]

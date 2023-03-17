@@ -1,0 +1,213 @@
+Script started on Fri Mar 17 04:38:33 2023
+Restored session: Fri Mar 17 04:34:53 EET 2023
+[1m[7m%[27m[1m[0m                                                                                                                                                                            ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo[0m[27m[24m[Jai@Arnels-MacBook-Pro kalayo % [K[?2004hccd todo-app[1m/[0m[0m/todo-backend[1m/[0m[0m [?2004l
+[1m[7m%[27m[1m[0m                                                                                                                                                                            ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004hddocker ps[?2004l
+CONTAINER ID   IMAGE                       COMMAND                  CREATED             STATUS          PORTS                    NAMES
+477b0191e305   todo-backend-todo_backend   "docker-entrypoint.s…"   About an hour ago   Up 49 seconds   0.0.0.0:8080->8080/tcp   todo-backend-todo_backend-1
+a9ce1cdb205e   mongo:latest                "docker-entrypoint.s…"   About an hour ago   Up 50 seconds   27017/tcp                todo-backend-mongo_db-1
+[1m[7m%[27m[1m[0m                                                                                                                                                                            ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004hdocker ps   exec -it [7ma9ce1cdb205e[27m[12D[27ma[27m9[27mc[27me[27m1[27mc[27md[27mb[27m2[27m0[27m5[27me /bin/sh[?2004l
+# ls
+bin  boot  data  dev  docker-entrypoint-initdb.d  etc  home  js-yaml.js  lib  lib32  lib64  libx32  media  mnt	opt  proc  root  run  sbin  srv  sys  tmp  usr	var
+# pwd
+/
+# env
+HOSTNAME=a9ce1cdb205e
+HOME=/data/db
+TERM=xterm
+MONGO_INITDB_ROOT_PASSWORD=example
+MONGO_PACKAGE=mongodb-org
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MONGO_MAJOR=6.0
+JSYAML_VERSION=3.13.1
+GOSU_VERSION=1.16
+MONGO_REPO=repo.mongodb.org
+PWD=/
+MONGO_INITDB_ROOT_USERNAME=root
+MONGO_VERSION=6.0.5
+# mongosh
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6413d2ee2d0b533b4b88d1db
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0[0m
+Using MongoDB:		6.0.5
+[1m[33mUsing Mongosh[0m:		1.8.0
+
+For mongosh info see: [1mhttps://docs.mongodb.com/mongodb-shell/[0m
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m: command listDatabases requires authentication
+[1G[0Jtest> [7Guse admin
+switched to db admin
+[1G[0Jadmin> [8Gdb.auth([32m'[39m[32mr[39m[32mo[39m[32mo[39m[32mt[39m[32m'[39m, [32m'[39m[32me[39m[32mx[39m[32ma[39m[32mm[39m[32mp[39m[32ml[39m[32me[39m[32m'[39m)
+{ ok: [33m1[39m }
+[1G[0Jadmin> [8Gshow dbs
+[1madmin[0m   100.00 KiB
+[1mconfig[0m   72.00 KiB
+[1mlocal[0m    72.00 KiB
+[1mtest[0m     72.00 KiB
+[1G[0Jadmin> [8Guse test
+switched to db test
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m   100.00 KiB
+[1mconfig[0m   72.00 KiB
+[1mlocal[0m    72.00 KiB
+[1mtest[0m     72.00 KiB
+[1G[0Jtest> [7Gshow collections
+[1mtodos[0m
+[1G[0Jtest> [7Gdb.todos.find()
+[
+  {
+    _id: ObjectId("6413c4bf24d49a00139ab43a"),
+    text: [32m'Aliens'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4cd24d49a00139ab43c"),
+    text: [32m'Interstellar'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4df24d49a00139ab43e"),
+    text: [32m'The Thing'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4ea24d49a00139ab440"),
+    text: [32m'Distric 9'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c51e24d49a00139ab442"),
+    text: [32m'Blade Runner'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c53424d49a00139ab444"),
+    text: [32m'Cube'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c57224d49a00139ab446"),
+    text: [32m'Everything Everywhere All at Once'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c58824d49a00139ab448"),
+    text: [32m'Dredd'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5c324d49a00139ab44b"),
+    text: [32m'I am Legend'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5cd24d49a00139ab44d"),
+    text: [32m'Upgrade'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5de24d49a00139ab44f"),
+    text: [32m'The Last of Us'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  }
+]
+[1G[0Jtest> [7Gdb.todos.insertOne({ [1G[0Jtest> db.todos.insertOne({[27Gtext[33mtext[39m: [32m"[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32ms[39m [32mi[39m[32mn[39m [32mm[39m[32my[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32mb[39m[32me[39m[32ml[39m[32mt[39m[32m"[39m})
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId("6413d39eeb3bfd5b24e435a6")
+}
+[1G[0Jtest> [7G[1G[0Jtest> db.todos.insertOne({[33mtext[39m: [32m"Increase the number of tools in my toolbelt"[39m})[80G[1G[0Jtest> db.todos.find()[22G
+[
+  {
+    _id: ObjectId("6413c4bf24d49a00139ab43a"),
+    text: [32m'Aliens'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4cd24d49a00139ab43c"),
+    text: [32m'Interstellar'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4df24d49a00139ab43e"),
+    text: [32m'The Thing'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c4ea24d49a00139ab440"),
+    text: [32m'Distric 9'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c51e24d49a00139ab442"),
+    text: [32m'Blade Runner'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c53424d49a00139ab444"),
+    text: [32m'Cube'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c57224d49a00139ab446"),
+    text: [32m'Everything Everywhere All at Once'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c58824d49a00139ab448"),
+    text: [32m'Dredd'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5c324d49a00139ab44b"),
+    text: [32m'I am Legend'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5cd24d49a00139ab44d"),
+    text: [32m'Upgrade'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413c5de24d49a00139ab44f"),
+    text: [32m'The Last of Us'[39m,
+    done: [33mfalse[39m,
+    __v: [33m0[39m
+  },
+  {
+    _id: ObjectId("6413d39eeb3bfd5b24e435a6"),
+    text: [32m'Increase the number of tools in my toolbelt'[39m
+  }
+]
+[1G[0Jtest> [7G
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+[1G[0Jtest> [7G
+# ^C
+# exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                            ]7;file://Arnels-MacBook-Pro.local/Users/ai/Codes/FSO/part12/kalayo/todo-app/todo-backend[0m[27m[24m[Jai@Arnels-MacBook-Pro todo-backend % [K[?2004heexit[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Fri Mar 17 04:43:13 2023
