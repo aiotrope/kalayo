@@ -24,8 +24,10 @@ services:
       REDIS_URL: redis://@cache:6379
 
   # backend service
-  todo_backend:
-    build: .
+  todo_backend_dev:
+    build:
+      context: ./todo-backend
+      dockerfile: dev.Dockerfile
     ports:
       - 8080:8080
     environment:
@@ -38,6 +40,19 @@ services:
     depends_on:
       - mongo_db
       - cache
+
+   # frontend service
+  todo_frontend_dev:
+    build:
+      context: ./todo-frontend
+      dockerfile: dev.Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - todo_backend_dev
+      - mongo_db
+      - cache
+  
 
 volumes:
   mongo_db:

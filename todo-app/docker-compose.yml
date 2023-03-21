@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  mongo_db:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo_db:/data/db # convention
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  cache:
+    image: redis:latest
+    restart: unless-stopped
+    command: ['redis-server', '--appendonly', 'yes']
+    expose:
+      - 6379
+    ports:
+      - 6379:6379
+    volumes:
+      - cache:/data
+    environment:
+      REDIS_URL: redis://@cache:6379
+
+  # backend service
+  todo_backend:
+    build:
+      context: ./todo-backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      PORT: 8080
+      MONGO_URL: mongodb://root:example@mongo_db:27017
+      REDIS_URL: redis://@cache:6379
+    links:
+      - mongo_db
+      - cache
+    depends_on:
+      - mongo_db
+      - cache
+
+   # frontend service
+  todo_frontend:
+    build:
+      context: ./todo-frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - todo_backend
+      - mongo_db
+      - cache
+  
+
+volumes:
+  mongo_db:
+    name: mongo-volume
+  cache:
+    driver: local

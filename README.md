@@ -4,7 +4,7 @@ FSO Part 12: Containers
 
 Date: 13.3.2023
 
-## CLI Commands
+## Common CLI commands used in this exercise module
 
 ```bash
 # list running containers
@@ -13,14 +13,35 @@ $ docker ps
 # list non running/running containers
 $ docker ps -a
 
-# build images/run development version of container
-$ docker compose -f <docker-compose_file> up
+# build/rebuild services for dev environment
+$ cd todo-app && docker compose -f docker-compose.dev.yml up --build
+
+# build images of container or rereun services for dev environment
+$ cd todo-app && docker compose -f docker-compose.dev.yml up
+
+# build/rebuild services for prod environment
+$ cd todo-app && docker compose -f docker-compose.yml up --build
+
+# build images of container or rereun services for prod environment
+$ cd todo-app && docker compose -f docker-compose.yml up
 
 # stop all running containers
 $ docker compose -f <docker-compose_file> down
 
 # run commads inside container
 $ docker exec -it <container_id> /bin/sh
+
+# list container
+$ docker container ls
+
+# stop running container
+$ docker container stop <container_id>
+
+# build docker image with tag based on Dockerfile on current dir
+$ docker build -t <nominated_name_of_image> .
+
+# run specific image in detach mode
+$ docker container run -d -p <port:port> <name_of_nominated_image> 
 
 # auth in Mongo container
 $ mongosh

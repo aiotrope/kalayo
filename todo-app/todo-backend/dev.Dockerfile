@@ -12,7 +12,7 @@ ENV PORT=8080
 
 ENV DEBUG=todo-express-backend:*
 
-ENV NODE_ENV production
+ENV NODE_ENV development
 
 EXPOSE 8080
 
