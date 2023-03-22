@@ -2,9 +2,9 @@
 
 FSO Part 12: Containers
 
-Date: 13.3.2023
+Date: 13.3.2023 - 22.3.2023
 
-## Common CLI commands used in this exercise module
+## Common CLI commands used (todo-app and my-app)
 
 ```bash
 # list running containers
@@ -13,17 +13,21 @@ $ docker ps
 # list non running/running containers
 $ docker ps -a
 
-# build/rebuild services for dev environment
+# build/rebuild services for dev environment at localhost:3000
 $ cd todo-app && docker compose -f docker-compose.dev.yml up --build
+$ cd my-app && docker compose -f docker-compose.dev.yml up --build
 
-# build images of container or rereun services for dev environment
+# build images of container or rereun services for dev environment at localhost:3000
 $ cd todo-app && docker compose -f docker-compose.dev.yml up
+$ cd my-app && docker compose -f docker-compose.dev.yml up
 
-# build/rebuild services for prod environment
+# build/rebuild services for prod (full stack) environment at http://localhost
 $ cd todo-app && docker compose -f docker-compose.yml up --build
+$ cd my-app && docker compose -f docker-compose.yml up --build
 
-# build images of container or rereun services for prod environment
+# build images of container or rereun services (full stack) for prod environment at http://localhost
 $ cd todo-app && docker compose -f docker-compose.yml up
+$ cd my-app && docker compose -f docker-compose.yml up
 
 # stop all running containers
 $ docker compose -f <docker-compose_file> down
@@ -31,11 +35,12 @@ $ docker compose -f <docker-compose_file> down
 # run commads inside container
 $ docker exec -it <container_id> /bin/sh
 
-# list container
+# list containers
 $ docker container ls
 
 # stop running container
 $ docker container stop <container_id>
+$ docker kill <container_id>
 
 # build docker image with tag based on Dockerfile on current dir
 $ docker build -t <nominated_name_of_image> .

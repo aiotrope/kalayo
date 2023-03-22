@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  mongo_db:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongo_db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  # backend service
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    environment:
+      PORT: 8080
+      MONGO_URL: mongodb://root:example@mongo_db:27017
+      REDIS_URL: redis://@cache:6379
+    links:
+      - mongo_db
+    depends_on:
+      - mongo_db
+
+   # frontend service
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+      - mongo_db
+
+volumes:
+  mongo_db:
+    name: mongo-volume
